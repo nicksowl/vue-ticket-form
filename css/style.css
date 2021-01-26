@@ -1,4 +1,3 @@
-/* Add Your Code Here */
 input.requred {
     border-width: 2px;
   }
@@ -28,7 +27,8 @@ input.requred {
   header {
     display: flex;
     align-items: center;
-    background-color: #4c7ef3;
+    /* background-color: #4c7ef3; */
+    background-color: #80CBC4;
     color: #ffffff;
   }
   
@@ -42,6 +42,8 @@ input.requred {
     font-size: 1.43rem;
     font-weight: 900;
     letter-spacing: 0.3px;
+
+    color: black;
   }
   
   .time {

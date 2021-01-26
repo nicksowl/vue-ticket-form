@@ -11,7 +11,9 @@ const app = new Vue({
       purchaseAgreementSigned: false,
       requiredFieldClass: 'required'
     },
+
     computed: {
+
       fullName: {
         get: function() {
           if (this.firstName && this.lastName) {
@@ -20,6 +22,7 @@ const app = new Vue({
             return this.firstName || this.lastName;
           }
         },
+
         set: function(newFullName) {
           const names = newFullName.split(' ');
   
@@ -34,6 +37,7 @@ const app = new Vue({
           }
         }
       },
+
       ticketDescription: function() {
         let readableTicketType = 'General Admission';
         if (this.ticketType === 'vip') {
@@ -47,12 +51,15 @@ const app = new Vue({
   
         return this.ticketQuantity + ' ' + readableTicketType + ' ' + ticketPluralization;
       },
+
       emailIsValid: function() {
         return this.email.includes('@');
       },
+
       formIsValid: function() {
         return this.firstName && this.lastName && this.emailIsValid && this.purchaseAgreementSigned;
       },
+
       emailClasses: function() {
         return {
           touched: this.email.length !== 0,
@@ -60,6 +67,7 @@ const app = new Vue({
         };
       }
     },
+
     watch: {
       specialRequests: function(newRequests, oldRequests) {
         if (newRequests.toLowerCase().includes('meet and greet') || 
@@ -68,6 +76,7 @@ const app = new Vue({
         }
       }
     },
+    
     methods: {
       resetFields: function() {
         this.firstName = '';
